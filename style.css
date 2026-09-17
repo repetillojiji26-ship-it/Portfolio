@@ -1,0 +1,701 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff8fb;
+    color: #4b3540;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 248, 251, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #f8dce8;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    height: 75px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #d85b91;
+}
+
+.logo span {
+    color: #f2a1bf;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #5c4650;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d85b91;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+.hero {
+    min-height: 100vh;
+    padding: 130px 8% 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    background:
+        radial-gradient(circle at 90% 20%, #ffe2ed 0%, transparent 25%),
+        radial-gradient(circle at 10% 90%, #ffe8f1 0%, transparent 25%);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hello {
+    color: #d85b91;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: 0.95;
+    color: #4c3440;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #d85b91;
+}
+
+.description {
+    max-width: 560px;
+    line-height: 1.8;
+    color: #796570;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn,
+.btn-outline {
+    padding: 13px 23px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn {
+    background: #d85b91;
+    color: white;
+    box-shadow: 0 10px 25px rgba(216, 91, 145, 0.25);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #c4477d;
+}
+
+.btn-outline {
+    border: 2px solid #d85b91;
+    color: #d85b91;
+}
+
+.btn-outline:hover {
+    background: #d85b91;
+    color: white;
+}
+
+
+
+.profile-area {
+    width: 400px;
+    height: 450px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.profile-photo {
+    width: 50%;
+    height: 50%;
+    object-fit: fit;
+    border-radius: 50%;
+}
+
+.profile-circle {
+    width: 310px;
+    height: 310px;
+    
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffd6e5, #f5a8c5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 10px solid white;
+    box-shadow: 0 20px 50px rgba(216, 91, 145, 0.2);
+   
+}
+
+.profile-icon {
+    font-size: 130px;
+}
+
+.profile-card span {
+    font-size: 25px;
+}
+
+.profile-card strong {
+    display: block;
+    color: #d85b91;
+}
+
+.profile-card small {
+    color: #8b747e;
+}
+
+.sparkle {
+    position: absolute;
+    color: #d85b91;
+    font-size: 30px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.sparkle1 {
+    top: 40px;
+    left: 45px;
+}
+
+.sparkle2 {
+    top: 90px;
+    right: 30px;
+    animation-delay: 0.7s;
+}
+
+.sparkle3 {
+    bottom: 90px;
+    left: 30px;
+    animation-delay: 1.2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+
+.section {
+    padding: 100px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title p {
+    color: #d85b91;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    color: #4c3440;
+}
+
+.section-title h2 span {
+    color: #d85b91;
+}
+
+
+
+.about-container {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about-card,
+.info-card {
+    background: white;
+    border-radius: 25px;
+    padding: 35px;
+
+    box-shadow: 0 10px 35px rgba(100, 50, 70, 0.08);
+}
+
+.about-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    color: #d85b91;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #796570;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.info-item > span {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+
+    background: #fff0f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.info-item small {
+    display: block;
+    color: #a38d96;
+    font-size: 12px;
+}
+
+.info-item strong {
+    font-size: 14px;
+}
+
+
+
+.pink-section {
+    background: #fff0f6;
+}
+
+.skills-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.skill-card {
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: #f3b2ca;
+    box-shadow: 0 15px 35px rgba(216, 91, 145, 0.12);
+}
+
+.skill-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+
+.skill-card p {
+    color: #806c75;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+
+.hobbies-container {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.hobby {
+    padding: 30px;
+    text-align: center;
+
+    border-radius: 22px;
+    background: white;
+
+    box-shadow: 0 8px 25px rgba(100, 50, 70, 0.06);
+
+    transition: 0.3s;
+}
+
+.hobby:hover {
+    transform: scale(1.03);
+}
+
+.hobby > div {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.hobby h3 {
+    color: #d85b91;
+    margin-bottom: 8px;
+}
+
+.hobby p {
+    color: #806c75;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+
+.goals-section {
+    background: linear-gradient(135deg, #fff0f6, #fff8fb);
+}
+
+.goals-container {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.goal-card {
+    text-align: center;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(100, 50, 70, 0.07);
+}
+
+.goal-card > span {
+    font-size: 45px;
+}
+
+.goal-card h3 {
+    color: #d85b91;
+    margin: 15px 0 10px;
+}
+
+.goal-card p {
+    color: #806c75;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+
+.contact-section {
+    background: #fff0f6;
+}
+
+.contact-box {
+    max-width: 900px;
+    margin: auto;
+
+    background: white;
+    border-radius: 30px;
+    padding: 45px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    box-shadow: 0 15px 40px rgba(100, 50, 70, 0.08);
+}
+
+.contact-text h3 {
+    color: #d85b91;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact-text p {
+    color: #806c75;
+    line-height: 1.8;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px;
+    border-radius: 15px;
+    background: #fff5f9;
+
+    color: #4b3540;
+}
+
+.contact-item > span {
+    font-size: 25px;
+}
+
+.contact-item small {
+    display: block;
+    color: #a38d96;
+}
+
+.contact-item strong {
+    font-size: 14px;
+}
+
+
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #4c3440;
+    color: #ffeaf2;
+    font-size: 13px;
+    line-height: 2;
+}
+
+footer strong {
+    color: #f5a8c5;
+}
+
+
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        gap: 0;
+
+        background: #fff8fb;
+        border-bottom: 1px solid #f8dce8;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 14px;
+    }
+
+    .menu-btn {
+        display: block;
+        color: #d85b91;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .profile-area {
+        width: 330px;
+        height: 380px;
+    }
+
+    .profile-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .profile-icon {
+        font-size: 105px;
+    }
+
+    .profile-card {
+        right: 0;
+        bottom: 15px;
+    }
+
+    .skills-container,
+    .hobbies-container,
+    .goals-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-container,
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .section {
+        padding: 75px 5%;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .skills-container,
+    .hobbies-container,
+    .goals-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-area {
+        transform: scale(0.9);
+    }
+
+    .contact-box {
+        padding: 25px;
+    }
+}
+.profile-image {
+  width: 350px;
+  height: 450px;
+  border-radius: 50% / 50%; /* makes the oval shape */
+  overflow: hidden; /* hides extra parts of photo */
+  background-color: #f8c6d8; /* your pink color as fallback
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* IMPORTANT - prevents stretching */
+  object-position: top; /* focus on your face */
+}
+/* Remove duplicate oval */
+.hero-image::before,
+.hero-image::after,
+.profile-image::before,
+.profile-image::after {
+  display: none !important;
+  content: none !important;
+}
+.hero-image {
+  position: relative;
+  background: #f8c6d8; 
+}
+.hero-image .shape { 
+  
+}
+.profile-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
